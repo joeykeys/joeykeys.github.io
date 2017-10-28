@@ -46,17 +46,21 @@ function draw() {
 
     var neckY = y - bodyHeight - neckHeight - radius;
     background(85);
-    stroke(150);
-    line(x + 32, y - bodyHeight, x + 32, neckY);
+
+
+    
+
     line(x + 12, neckY, x - 18, neckY - 43);
     line(x + 12, neckY, x + 42, neckY - 99);
     line(x + 12, neckY, x + 80, neckY + 12);
+
     noStroke();
     fill(152);
-    ellipse(x, y - 33, 33, 33);
-    fill(25);
+    ellipse(x, y - 23, 53, 23);
+    fill(35);
     ellipse(x - 15, y - bodyHeight, 80, bodyHeight - 23);
-    fill(40);
+
+    fill(35);
     ellipse(x + 12, neckY, radius, radius);
     fill(255);
     ellipse(x + 24, neckY - 6, 14, 14);
@@ -119,6 +123,8 @@ function draw() {
     ellipse(-14,-65,8,8);
     ellipse(14,-65,8,8);
     quad(0,-58,4,-51,0,-44,-4,-51);
+
+    print("Please Click");
 
 
 
