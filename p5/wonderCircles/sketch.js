@@ -1,15 +1,15 @@
 var cnv;
 
 function centerCanvas() {
-  var x = (windowWidth - width) / 2;
+  var x = (windowWidth - width) / 3;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
 }
 
 function setup() {
-  cnv = createCanvas(1000, 400);
+  cnv = createCanvas(1000, 700);
   centerCanvas();
-  background(50, 200, 230);
+  background(110, 120, 310);
 }
 
 function windowResized() {
@@ -19,12 +19,15 @@ function windowResized() {
 function draw() {
   if (mouseX !== pmouseX || mouseY !== pmouseY) {
     if (mouseIsPressed) {
-      fill(0,255,0);
+      fill(100,255,150);
     }
     else {
-      fill(random(250),random(200),random(100));
+      fill(random(150),random(200),random(325));
     }
+    ellipse(120,100,110,110);
+    triangle(234,23,320,60,32,200)
   }
-  rect(mouseX, mouseY, 80, 80);
+  ellipse(mouseX, mouseY, 80, 80);
   //ellipse(mouseX, mouseY, 80, 80);
+  triangle(mouseX, mouseY, 190, 90);
 }
