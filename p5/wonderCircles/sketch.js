@@ -1,8 +1,8 @@
 var cnv;
 
 function centerCanvas() {
-  var x = (windowWidth - width) / 3;
-  var y = (windowHeight - height) / 2;
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 1;
   cnv.position(x, y);
 }
 
@@ -17,7 +17,7 @@ function windowResized() {
 }
 
 function draw() {
-  if (mouseX !== pmouseX || mouseY !== pmouseY) {
+  if (mouseX !== pmouseX || mouseY != pmouseY) {
     if (mouseIsPressed) {
       fill(100,255,150);
     }
@@ -30,4 +30,7 @@ function draw() {
   ellipse(mouseX, mouseY, 80, 80);
   //ellipse(mouseX, mouseY, 80, 80);
   triangle(mouseX, mouseY, 190, 90);
+
+  
+
 }
