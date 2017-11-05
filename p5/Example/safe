@@ -1,0 +1,26 @@
+if (mouseX !== pmouseX || mouseY != pmouseY) {
+  if (mouseIsPressed) {
+    fill(100,255,150);
+  }
+  else {
+    fill(random(150),random(200),random(325));
+  }
+
+
+    var targetX = mouseX;
+  x += (targetX - x) * easing;
+  var targetY = mouseY;
+  y +=(targetY - y) * easing;
+  var weight = dist(x, y, px, py);
+  strokeWeight(weight);
+  line(x, y, px, py);
+  py = y;
+  px = x;
+
+  }
+  if (mouseIsPressed ==true) {
+    stroke(0);
+  }
+  line(0, 70, width, 50);
+}
+   

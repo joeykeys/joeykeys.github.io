@@ -1,14 +1,24 @@
+var cnv;
 var x = 60;
 var y = 440;
 var radius = 45;
 var bodyHeight = 160;
-var neckHeight = 70;
-var easing = 0.2;
-var angle = 0.5;
+var neckHeight = 20;
+var easing = 0.1;
+var angle = 0.2;
 var angle = 0.2;
 var offset = 450;
-var scalar = 120;
-var speed = 0.08;
+var scalar = 140;
+var speed = 0.07;
+var cnv;
+
+
+
+function centerCanvas() {
+    var x = (windowWidth - width) / 1;
+    var y = (windowHeight - height) / 1;
+    cnv.position(x, y);
+  }
 
 
 function setup() {
@@ -16,6 +26,12 @@ function setup() {
     strokeWeight(5);
     ellipseMode(RADIUS);
 }
+
+
+
+
+
+
 
 function draw() {
 
@@ -27,7 +43,7 @@ function draw() {
     x += random(-4,4);
     y += random(-1,1);
 
-    neckHeight = 80 + sin(angle) * 30;
+    neckHeight = 40 + sin(angle) * 30;
     angle +=0.05; 
 
     var ny = y - bodyHeight - neckHeight - radius;
@@ -124,7 +140,7 @@ function draw() {
     ellipse(14,-65,8,8);
     quad(0,-58,4,-51,0,-44,-4,-51);
 
-    print("Please Click");
+   
 
 
 
